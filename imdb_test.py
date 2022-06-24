@@ -8,7 +8,6 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.options import Options
-from selenium.webdriver.common.by import By
 from selenium_stealth import stealth
 import time
  
@@ -111,7 +110,8 @@ while i<len(arr):
     
     if (requests.head(arr[i]).status_code == 200):
         print("Valid link")
+	i+=1
     else:
         print("Broken link")
-
-    i += i
+i += 1
+print('All photos links valid...\n*******************************************************************')
